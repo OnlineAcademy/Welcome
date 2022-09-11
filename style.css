@@ -1,0 +1,480 @@
+:root{
+    --primaryColor : hwb(181 0% 18%) ;
+    --secondaryColor : #f7bcf7;
+    --lightColor : #ffffff ;
+    --bgColor-1 : #171a1c ;
+    --bgColor-2 :#22282a;
+    --padding : 8%
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+html{
+    font-family:'Josefin Sans', sans-serif;
+    color: var(--lightColor);
+    font-size: 16px;
+}
+.home{
+    
+    width: 100%;
+    height: 100vh;
+    background-color: var(--bgColor-1);
+    display: flex;
+    flex-direction: column;
+}
+span
+{
+    color: var(--primaryColor);
+    
+    
+}
+h2{
+    font-size: 2rem;
+    letter-spacing: 0.12rem;
+    cursor: pointer;
+}
+nav{
+    padding-top: 2.8rem;
+    padding-left: var(--padding);
+    padding-right: var(--padding);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+nav ul li {
+    list-style-type: none;
+    display: inline-block;
+    margin: 0.8rem 1.5rem;
+}
+nav ul li a {
+    color: var(--lightColor);
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: 0.4s;
+}
+nav ul li a:hover {
+    color: var(--primaryColor);
+}
+.btn{
+    background-color: var(--primaryColor);
+     color: var(--lightColor);
+     text-decoration: none;
+     font-weight: bold;
+     padding: 0.81rem 1.87rem;
+     border-radius: 30px;
+     border: 2px solid transparent;
+     transition: 0.4s;
+}
+.btn:hover{
+    background-color: transparent;
+    border: 2px solid var(--primaryColor);
+
+}
+.content {
+    
+    flex-grow: 1;
+    padding: 0  var(--padding) ;
+    display: flex;
+    align-items: center ;
+    justify-content: space-between;
+}
+h1{
+    font-size: 3.65rem;
+    margin: 1.7rem 0;
+}
+h3{
+    font-size: 1.5rem;
+    margin-bottom: 3.5rem;
+}
+h4{
+    font-size: 1.25rem;
+    letter-spacing: 0.12rem;
+    color: var(--secondaryColor);
+}
+.container-texts{
+    position: relative;
+    bottom: 10px;
+}
+.social{
+    margin-top: 3.5rem;
+}
+
+.social a {
+   text-decoration: none ;
+}
+
+.social img {
+    margin-right: 2rem;
+    width: 2.5rem;
+    transition: 0.4s;
+}
+.social img:hover {
+    transform: scale(1.2);
+}
+ .container-images {
+    width: 45%;
+    top: 10px;
+    height:  90%;
+    position: relative;
+    align-self: flex-end;
+}
+.container-images img{
+    position: absolute ;
+    bottom: 30px;
+   height: 80%;
+   left: 50%;
+   transform: translateX(-50%);
+   transition: bottom 1s, left 1s;
+ 
+}
+ .container-images:hover {
+    
+   bottom : 20px;
+
+}
+.container-images:hover  .pic{
+    
+   left: 45%;
+ 
+ }
+p{
+    color: var(--secondaryColor);
+    letter-spacing: 1px;
+    line-height: 1.8rem;
+    font-size: 1rem;
+}
+h5{
+    font-size: 1.37rem;
+    margin-bottom: 1.5rem;
+    letter-spacing: 2px;
+}
+.about{
+    background-color: var(--bgColor-2);
+    padding: 5rem var(--padding);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.about .container-image{
+    width: 35%;
+}
+.about .container-image img{
+    width: 80%;
+ 
+}
+.about .container-texts{
+width: 55%;
+}
+.services{
+    background-color:var(--bgColor-1);
+    padding: 2rem var(--padding);
+  
+}
+.text-center{
+    text-align: center;
+}
+.Box{
+    display: flex;
+    justify-content: space-between ;
+}
+.card
+{
+  width: 250px;
+  background-color: var(--bgColor-2);
+  border-radius: 20px;
+  padding: 3rem 2rem; 
+  text-align: center; 
+}
+.card i{
+   font-size: 3.12rem;
+   text-align: center;
+   color: var(--primaryColor );
+   margin: 2rem; 
+}
+
+@media screen  and (max-width : 575px) and (max-width : 1279px){
+     :root{
+        --padding :  1.5rem;
+     }
+     html{
+        font-size: 13px;
+     }
+     .home.container-images img{
+        height: auto;
+        width:100%
+     }
+  
+     nav{
+        position: fixed;
+        top: 0;
+        left:0;
+        right: 0;
+        height : 82px;
+        padding-top: 0;
+        background-color: var(--bgColor-1);
+        border-bottom: 1px solid var(--bgColor-2);
+       z-index: 100;
+    }
+
+     .container-texts{
+        bottom: 0em;
+     }
+     
+     h3{
+        margin-bottom: 70px;
+     }
+     .home .container-images{
+        display: none;
+     }
+     .social{
+    margin-top: 70px;
+}
+#menu{
+    display: block;
+}
+nav >  a{
+        display: none;
+     }
+     nav ul{
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: var(--bgColor-2);
+     }
+     nav ul li {
+        display: block;
+        text-align: center;
+        margin: 50px;
+     }
+     .whatsapp img{
+        position: fixed;
+       
+        text-decoration: none;
+        width: 2%;
+        right: 2px;
+       
+    } 
+.about .container-image{
+    display: none;
+
+}
+.about .container-texts{
+    width: 100%;
+}
+
+.Box{
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.pricing-plan-container{
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.content{
+    padding-top: 82px;
+}
+.whatsapp img{
+    position: fixed;
+
+    text-decoration: none;
+    width: 100%;
+    right: 30px;
+   
+} 
+.social img {
+    margin-right: 2rem;
+    width: 3.3rem;
+    transition: 0.4s;
+}
+}
+
+.Box .card span{
+    
+    border-radius: 30px;
+     border: 2px solid transparent;
+}
+
+#menu {
+    display: none;  
+    position: relative;
+    appearance: none;
+    border: none;
+    outline: none;
+    background: none;
+    cursor: pointer;
+    user-select: none;
+    
+}
+#menu span{
+    display: block;
+    width: 33px;
+    height: 4px;
+    margin: 5px auto;
+    background-color: var(--lightColor);
+    border-radius: 6px;
+    transform-origin: 0 0;
+    transition: 0.4s;
+    margin-bottom: 5px;
+
+}
+.whatsapp img{
+    position: fixed;
+    bottom: 40px;
+    right: 20px;
+    text-decoration: none;
+    width: 6%;
+    right: 8px;
+   
+} 
+
+.pricing-plan{
+    width: 300px;
+    border-radius: 25px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.2);
+    overflow: hidden;
+    font-family:  'Lato' ,sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 15px;
+
+}
+.pricing-plan-highlighted{
+    box-shadow: 0 0 15px rgba(0,0,0,0.4);
+    transform: scale(1.05);
+}
+  .pricing-plan-header {
+   padding: 25px;
+   background-color: hwb(181 0% 18%) ;
+   color: #ffffff;
+  }
+   .pricing-plan-summary{
+margin: 0;
+text-align: center;
+}
+.pricing-plan-title{
+    font-size: 1.5rem;
+    font-weight: 400;
+    text-align: center;
+}
+.pricing-plan-summary{
+    font-size: 1em;
+    font-weight: 300;
+    color: var(--lightColor);
+}
+.pricing-plan-description{
+    padding: 25px;
+}
+.pricing-plan-list{
+    padding: 0;
+    margin: 0;
+}
+.pricing-plan-feature{
+    list-style: none;
+    margin: 0;
+    padding-left: 25px;
+    position: relative;
+    font-size: 0.9rem;
+}
+.pricing-plan-feature:not(:last-child)
+{
+    margin-bottom: 0.5em;
+}
+
+.pricing-plan-feature::before{
+    content:" \2714";
+    color: hwb(181 0% 18%)  ;
+    position: absolute;
+    left: 0;
+}
+.pricing-plan-action {
+    padding: 25px;
+    border-top:1px solid #eeeeee ;
+    display: flex;
+    flex-direction: column;
+}
+.pricing-plan-button{
+    display: inline-block;
+    margin: 15px auto;
+    padding: 8px 20px;
+    text-decoration: none;
+    color:hwb(181 0% 18%)  ;
+    background: hwb(181 0% 18%);
+    border-radius: 5px;
+    border: 1px solid hwb(181 0% 18%) ;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+    font-weight: bold;
+    text-align: center;
+  margin-left: 25% ;
+  color: #171a1c;
+  
+}
+.pricing-plan-button:hover{
+    
+    color: black;background: #ffffff;
+}
+.pricing-plan-cost{
+    margin: 0;
+    text-align: center;
+    font-size: 2em;
+    color: #eeeeee;
+}
+.pricing-plan-text{
+    font-size: 0.9em;
+    text-align: center;
+    margin: 0 0 10px 0;
+    color: #eeeeee;
+
+}
+.pricing-plan-special-text{
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+    color: var(--bgColor-2);
+    background: hwb(181 0% 18%) ;
+    box-shadow: 0 0 10px rgba(0,0 ,0,0.2 );
+}.pricing-plan-container{
+    display: flex;
+    padding: 2rem var(--padding);
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    
+}
+.Offres{
+     background-color:var(--bgColor-2);
+        padding: 2rem var(--padding);
+ 
+}
+form{
+    display: flex;
+    flex-direction: column;
+    width: 24rem;
+    
+    place-items: center;
+}
+input,select,textarea{
+   padding: 1.44rem;
+   background: transparent;
+   border: 1px solid black; 
+}
+textarea{
+    height: 6rem;
+}
+button{
+    width: 8rem;
+    padding: 1.4rem;
+    cursor: pointer;
+    background:hwb(181 0% 18%) ;
+    color: whitesmoke;
+}
